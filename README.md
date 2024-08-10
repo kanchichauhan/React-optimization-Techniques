@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# React Testing - Jest
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Testing components
 
-## Available Scripts
+# REACT OPTIMIZATION TECHNIQUES
 
-In the project directory, you can run:
+- # List virtualization or windowing 
+    - Windowing is a technique that ensures that our lists only render items visible in the viewport.
+    As the user scrolls, we calculate which elements we should display based on the position of the scrollbar and then add and remove those elements as they enter and exit the viewport.
 
-### `npm start`
+    Rendering DOM elements is one of the most expensive operations web applications perform, and with windowing, we ensure that we render them only when needed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - Though it can improve performance, windowing is not a silver bullet. Windowing improves performance because it delays writing your entire list to the DOM, but the reality is that those items have to be written to the DOM eventually if you want the user to see them. If you don’t pay for the rendering time upfront, then you’ll have to pay for it later.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Sometimes, windowing can actually decrease perceived performance because the user has to wait for each individual list item to load on scroll instead of waiting for one eager load of the entire list on mount.
+    
+    npm install react-virtualized --save
+    npm install --save react-window
+    npm install --save react-virtualized-auto-sizer
 
-### `npm test`
+- # lazy loading images
+- memoization
+- useMemo Hook
+- useCallback hook
+- throttling debouncing events
+- optimizing calls
+- code splitting
+- react fragments
+- web workers
+- useTransition hook
+- use production build
+- server side scripting
+- use react profiler
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# conceptual Topics
 
-### `npm run build`
+- createRoot
+- Vitual DOM (not using now)
+- Reconciliation
+- Diffing algorithm
+- React fibre
+- server side and client side rendering in react
+- synthetic events in react
+- client side routing / server side routing
+- SPA
+- SPA/Server side rendering
+- Analytics
+- React Lifecycle
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# React Topics
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- https://www.javatpoint.com/react-interview-questions
+- REACT HOOKS => https://medium.com/womenintechnology/what-are-the-different-types-of-hooks-in-react-470fdeb86b9
